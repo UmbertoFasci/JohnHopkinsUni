@@ -94,9 +94,11 @@ OR
 
 Problems arise when we try to combine variables of different types.
 
-~x = 2~
-~y = "Hello World"~
-~z = x + y # this will give an error~
+#+begin_src python :session
+x = 2
+y = "Hello World"
+z = x + y # this will give an error
+#+end_src
 
 There are built-in functions in Python to convert from one type to another.
 These will be discussed later.
