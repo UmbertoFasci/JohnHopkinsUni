@@ -161,7 +161,7 @@ def addition(x,y,z):
 - You have a friend studying abroad in a country that lists the temperature in Celsius.
 - Your friend is more familiar with Fahrenheit. You'd like to write a program that will do the conversion for your friend.
 
-$F = 9/5 * (C) + 32$
+$$F = 9/5 * (C) + 32$$
 
   #+begin_src python :session :results output
 def temp_conv(C):
