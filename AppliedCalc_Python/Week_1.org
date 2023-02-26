@@ -153,6 +153,8 @@ def addition(x,y,z):
     return sum
   #+end_src
 
+  #+RESULTS:
+
 *** Exercise 2
 
 *Problem*:
@@ -160,9 +162,25 @@ def addition(x,y,z):
 - Your friend is more familiar with Fahrenheit. You'd like to write a program that will do the conversion for your friend.
 - F = 9/5 * (C) + 32
 
-  #+begin_src python :session
+  #+begin_src python :session :results output
 def temp_conv(C):
     # Convert Celsius to Fahrenheit.
     F = 9/5 * (C) + 32
     return F
   #+end_src
+
+  #+RESULTS:
+
+**** Test Exercise Code
+
+- 0 Celsius is 32.0 degrees Fahrenheit.
+- 100 Celsius is 212.0 degrees Fahreneit.
+
+#+begin_src python :session  :results output
+print(temp_conv(0))
+print(temp_conv(100))
+#+end_src
+
+#+RESULTS:
+: 32.0
+: 212.0
