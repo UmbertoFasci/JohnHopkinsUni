@@ -116,3 +116,5 @@ def double(x):
 This function is going to double a number and return the results.
 
 *def* is the Python speak for *define a new function*. While *double* is simply an arbitrary name we give to the function.
+*(x)* reprents the input of the function. While the ~x = x*2~ is the main statement or workings of the function.
+*return x* simply is an instruction of what the function is to return. In this case, the overwritten variable value *x*.
