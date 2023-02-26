@@ -138,3 +138,17 @@ c = double(4)
 #+end_src
 
 With this (a, b, c) would equal (4, 6, 8) respectivly.
+
+*** Exercise
+
+- Write a Python Function that takes three inputs.
+- The function should add these three numbers together and return a sum.
+- Write a Python statement that will execute the function.
+- Use # to add a brief description of what your function is doing.
+
+  #+begin_src python :session
+def addition(x,y,z):
+    # Returns the sum of x, y, and z.
+    sum = x + y + z
+    return sum
+  #+end_src
