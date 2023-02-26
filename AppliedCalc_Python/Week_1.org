@@ -1,0 +1,118 @@
+#+TITLE: Introduction to Python for Applied Calculus
+#+AUTHOR: Umberto Fasci
+#+DESCRIPTION: Programming now has relevance well beyond just Computer Science. In this module and throughout this course, you will learn not only about programming using Python, but also how to use those skills to solve real, complex problems in future classes, at work, or elsewhere. To ensure this, copious amounts of examples are included, with explanations, throughout the course. You are strongly encouraged not only trace through them, but also experiment with (run, alter, break) them on your own. The assignments are linked to the respective module. Putting time in here will give you the opportunity to solve actual scientific problems and challenge you in a way that that’ll not only help you make use of the skills we’ll discuss in lecture, but also to leave you with that oh-so-satisfying feeling of having conquered the challenge when you’re done!
+
+* Learning Objectives
+
+- Assign a value to and perform operations on a Python variable.
+- Identify valid and invalid variable names for use in Python.
+- Test the truth of expressions in Python using comparison operators.
+- Distinguish between the different types of division in Python.
+- Perform arithmetic operations in Python.
+- Correctly identify the data types in Python, including integers, floating-point numbers, strings, and Boolean values.
+- Find a decimal approximation for an irrational number with SymPy.
+- Use SymPy to create rational numbers in Python.
+- Make a substitution in a symbolic expression using SymPy.
+- Define symbol in SymPy to represent a variable in a math expression.
+- Describe the differences between symbolic computation and numerical computation.
+
+* Introduction to Python :VIDEO:
+
+** How Python Executes Statements
+
+A Python program is a collection of statements and comments.
+
+*Statements* - an expression for Python to execute.
+*Comments* - a note to yourself and those reading your programs, ignored by Python.
+
+#+begin_src python :session
+# This is a comment. This is ignored by Python
+x = 10
+y = 12 # this part is ignored
+#+end_src
+
+Python executes lines from top to bottom.
+
+Python does not care about spaces...
+
+#+begin_src python :session
+# These two Python statements are equivalent
+x = 10
+x=10
+#+end_src
+
+However, Python does care about capitalization. ~X~ is not the same as ~x~.
+
+** Variables
+
+~x = 3.9~
+
+A *variable* stores a value in the computer's memory for use later in the program.
+The left side of the ~=~ is the name we want to give to the variable - so we can retrieve it later.
+The right side of the ~=~ is the value we want to store in the variable.
+
+In programming ~=~ doesn't mean =equals=. It means =assign=.
+
+~x = 3.9 * x * (1 - x)~
+
+The right hand side of the ~=~ could also be a complicated math expression.
+
+However, it could also be a string:
+
+~x = "SOME VALUE"~
+
+Variables can be overwritten and updated.
+
+~x = x + 1~
+
+** The Magic of Python
+
+Variables can hold any type of data - numbers or text.
+
+
+~x = "PYTHON IS FUN"~
+~y = 2~
+~z = 3.5~
+
+A really nice feature of Python is that we don't have to specify which type of data we are storing.
+
+Other languages don't have this feature.
+
+Another feature of variables in Python is that you can combine variables of the same type without issue.
+
+For example:
+
+~x = 2~
+~y = 3~
+~z = x + y # z has the value 5~
+
+OR
+
+~x = "Hello"~
+~y = "World"~
+~z = x + y # z "Hello World"~
+
+Problems arise when we try to combine variables of different types.
+
+~x = 2~
+~y = "Hello World"~
+~z = x + y # this will give an error~
+
+There are built-in functions in Python to convert from one type to another.
+These will be discussed later.
+
+** Functions
+
+A function is a rule for taking zero or more inputs, performing some operations, and the returning an output.
+
+Functions are very useful when you have a repetitive task.
+
+#+begin_src python :session
+def double(x):
+    x = x*2
+    return x
+#+end_src
+
+This function is going to double a number and return the results.
+
+*def* is the Python speak for *define a new function*. While *double* is simply an arbitrary name we give to the function.
