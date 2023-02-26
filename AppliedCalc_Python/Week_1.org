@@ -139,7 +139,7 @@ c = double(4)
 
 With this (a, b, c) would equal (4, 6, 8) respectivly.
 
-*** Exercise
+*** Exercise 1
 
 - Write a Python Function that takes three inputs.
 - The function should add these three numbers together and return a sum.
@@ -151,4 +151,18 @@ def addition(x,y,z):
     # Returns the sum of x, y, and z.
     sum = x + y + z
     return sum
+  #+end_src
+
+*** Exercise 2
+
+*Problem*:
+- You have a friend studying abroad in a country that lists the temperature in Celsius.
+- Your friend is more familiar with Fahrenheit. You'd like to write a program that will do the conversion for your friend.
+- F = 9/5 * (C) + 32
+
+  #+begin_src python :session
+def temp_conv(C):
+    # Convert Celsius to Fahrenheit.
+    F = 9/5 * (C) + 32
+    return F
   #+end_src
