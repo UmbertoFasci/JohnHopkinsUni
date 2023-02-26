@@ -54,7 +54,9 @@ However, Python does care about capitalization. ~X~ is not the same as ~x~.
 
 ** Variables
 
-~x = 3.9~
+#+begin_src python :session
+x = 3.9
+#+end_src
 
 A *variable* stores a value in the computer's memory for use later in the program.
 The left side of the ~=~ is the name we want to give to the variable - so we can retrieve it later.
@@ -62,26 +64,33 @@ The right side of the ~=~ is the value we want to store in the variable.
 
 In programming ~=~ doesn't mean =equals=. It means =assign=.
 
-~x = 3.9 * x * (1 - x)~
+#+begin_src python :session
+x = 3.9 * x * (1 - x)
+#+end_src
 
 The right hand side of the ~=~ could also be a complicated math expression.
 
 However, it could also be a string:
 
-~x = "SOME VALUE"~
+#+begin_src python :session
+x = "SOME VALUE"
+#+end_src
 
 Variables can be overwritten and updated.
 
-~x = x + 1~
+#+begin_src python :session
+x = x + 1
+#+end_src
 
 ** The Magic of Python
 
 Variables can hold any type of data - numbers or text.
 
-
-~x = "PYTHON IS FUN"~
-~y = 2~
-~z = 3.5~
+#+begin_src python :session
+x = "PYTHON IS FUN"
+y = 2
+z = 3.5
+#+end_src
 
 A really nice feature of Python is that we don't have to specify which type of data we are storing.
 
@@ -91,15 +100,19 @@ Another feature of variables in Python is that you can combine variables of the 
 
 For example:
 
-~x = 2~
-~y = 3~
-~z = x + y # z has the value 5~
+#+begin_src python :session
+x = 2
+y = 3
+z = x + y # z has the value 5
+#+end_src
 
 OR
 
-~x = "Hello"~
-~y = "World"~
-~z = x + y # z "Hello World"~
+#+begin_src python :session
+x = "Hello"
+y = "World"
+z = x + y # z "Hello World"
+#+end_src
 
 Problems arise when we try to combine variables of different types.
 
