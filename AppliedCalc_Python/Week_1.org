@@ -18,6 +18,8 @@
   - [[#control-statements][Control Statements]]
   - [[#numpy][Numpy]]
 - [[#options-for-using-python][Options for Using Python]]
+- [[#data-types-and-variables-in-python][Data Types and Variables in Python]]
+  - [[#data-types][Data Types]]
 
 * Learning Objectives
 
@@ -394,3 +396,18 @@ This section covers how to install Python, for my purposes I do not need to revi
 
 - [[https://realpython.com/installing-python/][Python 3 Installation & Setup Guide on RealPython]]
 - [[https://realpython.com/interacting-with-python/][Interacting with Python on RealPython]]
+
+
+* Data Types and Variables in Python :READING:
+
+Python is an object-oriented language where virtually every item in a Python program is an object of a specified type or class.
+
+** Data Types
+
+| Abbreviation | Type                   | Definition                                                           | Example        |
+|--------------+------------------------+----------------------------------------------------------------------+----------------|
+| int          | integers               | Positive and negative whole numbers, including 0                     | 10             |
+| float        | Floating-point numbers | Positive and negative numbers with a decimal point                   | 10.5           |
+| str          | Strings                | Sequences of characters, contained in either single or double quotes | "STRING"       |
+| bool         | Booleans               | Truth Values                                                         | True and False |
+|--------------+------------------------+----------------------------------------------------------------------+----------------|
