@@ -411,3 +411,12 @@ Python is an object-oriented language where virtually every item in a Python pro
 | str          | Strings                | Sequences of characters, contained in either single or double quotes | "STRING"       |
 | bool         | Booleans               | Truth Values                                                         | True and False |
 |--------------+------------------------+----------------------------------------------------------------------+----------------|
+
+*** Converting Between Types
+
+The following functions convert an object of one type to another.
+
+- *int()* converts a floating-point number or string of numerals to an integer
+- *float()* converts an integer or string of numerals (possible containing a decimal point) to a floating-point number
+- *str()* converts an object to a string
+- *bool()* converts an object to a Boolean value. Non-zero values and non-empty strings become True. Values equal to zero and empty strings become False.
