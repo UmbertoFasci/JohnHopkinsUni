@@ -21,6 +21,7 @@
 - [[#data-types-and-variables-in-python][Data Types and Variables in Python]]
   - [[#data-types][Data Types]]
   - [[#variables-1][Variables]]
+- [[#operators-and-expressions-in-python][Operators and Expressions in Python]]
 
 * Learning Objectives
 
@@ -443,3 +444,7 @@ Variable names can be any length. They can include lowercase or uppercase letter
 The first character of a variable name cannot be a numeral.
 
 Variable names cannot use any of Python's reserved keywords.
+
+* Operators and Expressions in Python :READING:
+
+For my purposes this section will not be reviewed.
