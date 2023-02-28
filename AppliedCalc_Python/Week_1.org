@@ -13,6 +13,7 @@
   - [[#simultaneous-assignment][Simultaneous Assignment]]
   - [[#lists][Lists]]
   - [[#definite-loops][Definite Loops]]
+  - [[#range-function][Range Function]]
 
 * Learning Objectives
 
@@ -278,7 +279,7 @@ for temp in temps:
     F = 9/5 * (temp) + 32
 #+end_src
 
-*** Range Function
+** Range Function
 
 What if I don't want to iterate over every value?
 
@@ -286,4 +287,15 @@ The range function also allows us to specify a step size.
 
 #+begin_src python :session
 range(start, stop, step)
+#+end_src
+
+*** Exercise
+
+Once again using temperature conversion as an example...
+
+Try modifying the program so that it converts all the temperatures from 0 to 100 Celsius in steps of 5.
+
+#+begin_src python :session
+for temp in range(0, 100, 5):
+    F = 9/5 * (temp) + 32
 #+end_src
