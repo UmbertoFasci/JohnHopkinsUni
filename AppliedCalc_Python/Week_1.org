@@ -15,6 +15,8 @@
   - [[#definite-loops][Definite Loops]]
   - [[#range-function][Range Function]]
   - [[#indefinite-loops][Indefinite Loops]]
+  - [[#control-statements][Control Statements]]
+  - [[#numpy][Numpy]]
 
 * Learning Objectives
 
@@ -324,3 +326,26 @@ print(x)
 #+end_src
 
 This loop will execute continuously until the ~x~ variable is overwritten with a value greater than 100.
+
+
+** Control Statements
+
+#+begin_src python :session
+x = 10
+
+if (x > 5):
+    print("Greater than 5") # This will print.
+#+end_src
+
+** Numpy
+
+Lists can hold multiple values, but they cannot be treated as vectors.
+
+For example:
+
+#+begin_src python :session
+a = [1, 2, 3]
+b = [4, 5, 6]
+
+c = a * b # this will generate an error.
+#+end_src
