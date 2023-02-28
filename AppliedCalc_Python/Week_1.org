@@ -349,3 +349,22 @@ b = [4, 5, 6]
 
 c = a * b # this will generate an error.
 #+end_src
+
+With numpy, you can use lists as vectors in a mathematical sense.
+
+For example:
+
+#+begin_src python :session :results output
+import numpy as np
+
+a = np.array([1, 2, 3])
+b = np.array([4, 5, 6])
+
+c = a * b
+
+return c
+#+end_src
+
+Results:
+
+[4, 10, 18]
