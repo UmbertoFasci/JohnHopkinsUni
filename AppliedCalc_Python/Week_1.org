@@ -10,6 +10,7 @@
   - [[#the-magic-of-python][The Magic of Python]]
   - [[#functions][Functions]]
   - [[#functions-in-action][Functions in Action]]
+  - [[#simultaneous-assignment][Simultaneous Assignment]]
 
 * Learning Objectives
 
@@ -212,3 +213,15 @@ print(temp_conv(100))
 
 32.0
 212.0
+
+
+** Simultaneous Assignment
+
+Some programmers like their programs to be as compact as possible. If this is me, perhaps it is...
+then I can assign multiple variable values at once.
+
+<var>, <var>, ... = <expr>, <expr>, ...
+
+#+begin_src python :session
+x, y = 10, 15
+#+end_src
