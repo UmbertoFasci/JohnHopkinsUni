@@ -12,6 +12,7 @@
   - [[#functions-in-action][Functions in Action]]
   - [[#simultaneous-assignment][Simultaneous Assignment]]
   - [[#lists][Lists]]
+  - [[#definite-loops][Definite Loops]]
 
 * Learning Objectives
 
@@ -172,12 +173,12 @@ With this (a, b, c) would equal (4, 6, 8) respectivly.
 - Write a Python statement that will execute the function.
 - Use # to add a brief description of what your function is doing.
 
-  #+begin_src python :session
+#+begin_src python :session
 def addition(x,y,z):
     # Returns the sum of x, y, and z.
     sum = x + y + z
     return sum
-  #+end_src
+#+end_src
 
   #+RESULTS:
 
@@ -191,12 +192,12 @@ The Celsius to Fahrenheit conversion equation:
 
 $$F = 9/5 * (C) + 32$$
 
-  #+begin_src python :session :results output
+#+begin_src python :session :results output
 def temp_conv(C):
     # Convert Celsius to Fahrenheit.
     F = 9/5 * (C) + 32
     return F
-  #+end_src
+#+end_src
 
   #+RESULTS:
 
@@ -240,4 +241,49 @@ A list is a special variable that can hold multiple values.
 
 #+begin_src python :session
 x = [54, 76, 100]
+#+end_src
+
+
+** Definite Loops
+
+A /definite/ loop executes a definite number of times, i.e., at the time Python starts the loop it knows
+exactly how many /iterations/ to do.
+
+for <var> in <sequence>:
+    <body>
+
+The beginning and end of the body are indicated by indentation.
+
+For example:
+
+#+begin_src python :session
+values = [54, 76, 100]
+
+for value in values:
+    value = value*2
+#+end_src
+
+*** Exercise
+
+*Temperature Conversion*
+
+$$F = 9/5 * (C) + 32$$
+
+Use a for loop to convert a list of temps.
+
+#+begin_src python :session
+temps = [0, 100, 38]
+
+for temp in temps:
+    F = 9/5 * (temp) + 32
+#+end_src
+
+*** Range Function
+
+What if I don't want to iterate over every value?
+
+The range function also allows us to specify a step size.
+
+#+begin_src python :session
+range(start, stop, step)
 #+end_src
