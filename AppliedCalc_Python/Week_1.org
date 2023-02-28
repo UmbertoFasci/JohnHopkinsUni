@@ -20,6 +20,7 @@
 - [[#options-for-using-python][Options for Using Python]]
 - [[#data-types-and-variables-in-python][Data Types and Variables in Python]]
   - [[#data-types][Data Types]]
+  - [[#variables-1][Variables]]
 
 * Learning Objectives
 
@@ -430,3 +431,15 @@ Floating-point numbers are sometimes given in scientific notations. For example,
 #+end_src
 
 This represents $1.23 \times 10^4 = 12300$.
+
+** Variables
+
+In python, a *variable* is a name given to an object. Variables are used to store different types of data in a program.
+
+*** Rules for naming variables
+
+Variable names can be any length. They can include lowercase or uppercase letters, numerals, and/or the underscore character (_). Note that lowercase and uppercase letters are counted as different characters, so variable names are case-sensitive.
+
+The first character of a variable name cannot be a numeral.
+
+Variable names cannot use any of Python's reserved keywords.
