@@ -17,6 +17,7 @@
   - [[#indefinite-loops][Indefinite Loops]]
   - [[#control-statements][Control Statements]]
   - [[#numpy][Numpy]]
+- [[#options-for-using-python][Options for Using Python]]
 
 * Learning Objectives
 
@@ -380,3 +381,9 @@ for i in range(10):
 With empty lists you can, in practice, store results. In this case the result from this code would return a list:
 
 [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
+
+
+
+
+
+* Options for Using Python :READING:
