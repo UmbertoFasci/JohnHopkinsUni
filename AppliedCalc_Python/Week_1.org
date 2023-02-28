@@ -203,11 +203,14 @@ def temp_conv(C):
 - 0 Celsius is 32.0 degrees Fahrenheit.
 - 100 Celsius is 212.0 degrees Fahrenheit.
 
-#+begin_src python :session  :results output
+#+begin_src python :session  :results output code
 print(temp_conv(0))
 print(temp_conv(100))
 #+end_src
 
+Output:
 #+RESULTS:
-: 32.0
-: 212.0
+#+begin_src python
+32.0
+212.0
+#+end_src
