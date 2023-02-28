@@ -11,6 +11,7 @@
   - [[#functions][Functions]]
   - [[#functions-in-action][Functions in Action]]
   - [[#simultaneous-assignment][Simultaneous Assignment]]
+  - [[#lists][Lists]]
 
 * Learning Objectives
 
@@ -224,4 +225,19 @@ then I can assign multiple variable values at once.
 
 #+begin_src python :session
 x, y = 10, 15
+#+end_src
+
+
+** Lists
+
+A variable can only hold one value.
+
+#+begin_src python :session
+x = 10
+#+end_src
+
+A list is a special variable that can hold multiple values.
+
+#+begin_src python :session
+x = [54, 76, 100]
 #+end_src
