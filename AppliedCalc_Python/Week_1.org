@@ -22,6 +22,8 @@
   - [[#data-types][Data Types]]
   - [[#variables-1][Variables]]
 - [[#operators-and-expressions-in-python][Operators and Expressions in Python]]
+- [[#sympy-basics][SymPy Basics]]
+  - [[#symbols][Symbols]]
 
 * Learning Objectives
 
@@ -448,3 +450,42 @@ Variable names cannot use any of Python's reserved keywords.
 * Operators and Expressions in Python :READING:
 
 For my purposes this section will not be reviewed.
+
+* SymPy Basics :READING:
+
+*SymPy* is a Python library for working with mathematical expressions in *symbolic* form.
+
+We have seen that Python variables must be assigned a value. However, in math, variables are often used to represent unknowns. Symbolic computation allows us to manipulate expressions with variables that are not assigned a value.
+
+Symbolic computation also retains the exact value of expressions, rather than rounding them to decimals.
+
+The alternative to symbolic computation is numerical computation. In *numerical computation*, all values are represented as either integers or floating-point numbers.
+
+** Symbols
+
+To use variables as unknowns, we define them with *symbols()*.
+
+symbols() can be used to define multiple variables at once, in a string separated by spaces or commas.
+
+Like python variables, symbols may have names longer than one character.
+
+#+begin_src python :session :results output
+# Define a single symbol
+x = symbols('x')
+
+# Define three symbols at once
+a, b, c = symbols('a, b, c')
+
+# Define a multi-character symbol
+tau = symbols('tau')
+#+end_src
+
+#+RESULTS:
+
+As an example, running the following code without defining x results in an error. Defining x as a symbol results in the expression x + 1.
+
+#+begin_src python :session :results output verbatim
+x = symbols('x')
+
+print(x + 1)
+#+end_src
