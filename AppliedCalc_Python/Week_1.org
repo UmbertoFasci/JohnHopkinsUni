@@ -387,3 +387,10 @@ With empty lists you can, in practice, store results. In this case the result fr
 
 
 * Options for Using Python :READING:
+
+This section covers how to install Python, for my purposes I do not need to review this section in such detail.
+
+*Articles provided by the course*:
+
+- [[https://realpython.com/installing-python/][Python 3 Installation & Setup Guide on RealPython]]
+- [[https://realpython.com/interacting-with-python/][Interacting with Python on RealPython]]
