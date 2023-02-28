@@ -365,6 +365,18 @@ c = a * b
 return c
 #+end_src
 
-Results:
+*Results:*
 
 [4, 10, 18]
+
+*** A handy use of lists
+
+#+begin_src python :session
+x = []
+for i in range(10):
+    x.append(i*2)
+#+end_src
+
+With empty lists you can, in practice, store results. In this case the result from this code would return a list:
+
+[0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
