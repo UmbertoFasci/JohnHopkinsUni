@@ -1,6 +1,5 @@
 #+TITLE: Introduction to Python for Applied Calculus
 #+AUTHOR: Umberto Fasci
-#+OPTIONS: broken-links:t
 #+DESCRIPTION: Programming now has relevance well beyond just Computer Science. In this module and throughout this course, you will learn not only about programming using Python, but also how to use those skills to solve real, complex problems in future classes, at work, or elsewhere. To ensure this, copious amounts of examples are included, with explanations, throughout the course. You are strongly encouraged not only trace through them, but also experiment with (run, alter, break) them on your own. The assignments are linked to the respective module. Putting time in here will give you the opportunity to solve actual scientific problems and challenge you in a way that that’ll not only help you make use of the skills we’ll discuss in lecture, but also to leave you with that oh-so-satisfying feeling of having conquered the challenge when you’re done!
 
 * Table of Contents :TOC:
