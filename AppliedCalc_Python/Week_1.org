@@ -568,9 +568,9 @@ x + 1
 #+end_src
 
 #+RESULTS:
-#+begin_export latex
+#+begin_latex
 $\displaystyle x + 1$
-#+end_export
+#+end_latex
 
 ~This exports automatically as LaTex, I will review how this renders in the git view.~
 
@@ -593,9 +593,9 @@ expression.subs(x, 5)
 #+end_src
 
 #+RESULTS:
-#+begin_src latex
+#+begin_latex
 $\displaystyle 9$
-#+end_src
+#+end_latex
 
 ** Rational Numbers
 
