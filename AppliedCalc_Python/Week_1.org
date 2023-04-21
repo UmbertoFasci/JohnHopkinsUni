@@ -569,7 +569,7 @@ x + 1
 
 #+RESULTS:
 #+begin_center
-$x + 1$
+$\displaystyle x + 1$
 #+end_center
 
 ~This exports automatically as LaTex, I will review how this renders in the git view.~
@@ -594,7 +594,7 @@ expression.subs(x, 5)
 
 #+RESULTS:
 #+begin_center
-$9$
+$\displaystyle 9$
 #+end_center
 
 
