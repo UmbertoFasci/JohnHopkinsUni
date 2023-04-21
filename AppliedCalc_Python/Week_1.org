@@ -48,7 +48,7 @@ A Python program is a collection of statements and comments.
 *Statements* - an expression for Python to execute.
 *Comments* - a note to yourself and those reading your programs, ignored by Python.
 
-#+begin_src python :session
+#+begin_src jupyter-python
 # This is a comment. This is ignored by Python
 x = 10
 y = 12 # this part is ignored
@@ -58,7 +58,7 @@ Python executes lines from top to bottom.
 
 Python does not care about spaces...
 
-#+begin_src python :session
+#+begin_src jupyter-python
 # These two Python statements are equivalent
 x = 10
 x=10
@@ -68,7 +68,7 @@ However, Python does care about capitalization. ~X~ is not the same as ~x~.
 
 ** Variables
 
-#+begin_src python :session
+#+begin_src jupyter-python
 x = 3.9
 #+end_src
 
@@ -78,7 +78,7 @@ The right side of the ~=~ is the value we want to store in the variable.
 
 In programming ~=~ doesn't mean =equals=. It means =assign=.
 
-#+begin_src python :session
+#+begin_src jupyter-python
 x = 3.9 * x * (1 - x)
 #+end_src
 
@@ -86,13 +86,13 @@ The right hand side of the ~=~ could also be a complicated math expression.
 
 However, it could also be a string:
 
-#+begin_src python :session
+#+begin_src jupyter-python
 x = "SOME VALUE"
 #+end_src
 
 Variables can be overwritten and updated.
 
-#+begin_src python :session
+#+begin_src jupyter-python
 x = x + 1
 #+end_src
 
@@ -100,7 +100,7 @@ x = x + 1
 
 Variables can hold any type of data - numbers or text.
 
-#+begin_src python :session
+#+begin_src jupyter-python
 x = "PYTHON IS FUN"
 y = 2
 z = 3.5
@@ -114,7 +114,7 @@ Another feature of variables in Python is that you can combine variables of the 
 
 For example:
 
-#+begin_src python :session
+#+begin_src jupyter-python
 x = 2
 y = 3
 z = x + y # z has the value 5
@@ -122,7 +122,7 @@ z = x + y # z has the value 5
 
 OR
 
-#+begin_src python :session
+#+begin_src jupyter-python
 x = "Hello"
 y = "World"
 z = x + y # z "Hello World"
@@ -130,7 +130,7 @@ z = x + y # z "Hello World"
 
 Problems arise when we try to combine variables of different types.
 
-#+begin_src python :session
+#+begin_src jupyter-python
 x = 2
 y = "Hello World"
 z = x + y # this will give an error
@@ -145,7 +145,7 @@ A function is a rule for taking zero or more inputs, performing some operations,
 
 Functions are very useful when you have a repetitive task.
 
-#+begin_src python :session
+#+begin_src jupyter-python
 def double(x):
     x = x*2
     return x
@@ -163,13 +163,13 @@ To call a function, we can have our function declared as we have done above and 
 
 For example:
 
-#+begin_src python :session
+#+begin_src jupyter-python
 def double(x):
     x = x*2
     return x
 #+end_src
 
-#+begin_src python :session
+#+begin_src jupyter-python
 a = double(2)
 b = double(3)
 c = double(4)
@@ -184,7 +184,7 @@ With this (a, b, c) would equal (4, 6, 8) respectivly.
 - Write a Python statement that will execute the function.
 - Use # to add a brief description of what your function is doing.
 
-#+begin_src python :session
+#+begin_src jupyter-python
 def addition(x,y,z):
     # Returns the sum of x, y, and z.
     sum = x + y + z
@@ -203,7 +203,7 @@ The Celsius to Fahrenheit conversion equation:
 
 $$F = 9/5 * (C) + 32$$
 
-#+begin_src python :session :results output
+#+begin_src jupyter-python
 def temp_conv(C):
     # Convert Celsius to Fahrenheit.
     F = 9/5 * (C) + 32
@@ -217,7 +217,7 @@ def temp_conv(C):
 - 0 Celsius is 32.0 degrees Fahrenheit.
 - 100 Celsius is 212.0 degrees Fahrenheit.
 
-#+begin_src python :session  :results output verbatim
+#+begin_src jupyter-python
 print(temp_conv(0))
 print(temp_conv(100))
 #+end_src
@@ -235,7 +235,7 @@ then I can assign multiple variable values at once.
 
 <var>, <var>, ... = <expr>, <expr>, ...
 
-#+begin_src python :session
+#+begin_src jupyter-python
 x, y = 10, 15
 #+end_src
 
@@ -244,13 +244,13 @@ x, y = 10, 15
 
 A variable can only hold one value.
 
-#+begin_src python :session
+#+begin_src jupyter-python
 x = 10
 #+end_src
 
 A list is a special variable that can hold multiple values.
 
-#+begin_src python :session
+#+begin_src jupyter-python
 x = [54, 76, 100]
 #+end_src
 
@@ -267,7 +267,7 @@ The beginning and end of the body are indicated by indentation.
 
 For example:
 
-#+begin_src python :session
+#+begin_src jupyter-python
 values = [54, 76, 100]
 
 for value in values:
@@ -282,7 +282,7 @@ $$F = 9/5 * (C) + 32$$
 
 Use a for loop to convert a list of temps.
 
-#+begin_src python :session
+#+begin_src jupyter-python
 temps = [0, 100, 38]
 
 for temp in temps:
@@ -295,7 +295,7 @@ What if I don't want to iterate over every value?
 
 The range function also allows us to specify a step size.
 
-#+begin_src python :session
+#+begin_src jupyter-python
 range(start, stop, step)
 #+end_src
 
@@ -305,7 +305,7 @@ Once again using temperature conversion as an example...
 
 Try modifying the program so that it converts all the temperatures from 0 to 100 Celsius in steps of 5.
 
-#+begin_src python :session
+#+begin_src jupyter-python
 for temp in range(0, 100, 5):
     F = 9/5 * (temp) + 32
 #+end_src
@@ -324,7 +324,7 @@ This type of loop will execute until a condition is /true/.
 
 For example:
 
-#+begin_src python :session
+#+begin_src jupyter-python
 x = 10
 while x < 100:
     x = x + 3
@@ -337,7 +337,7 @@ This loop will execute continuously until the ~x~ variable is overwritten with a
 
 ** Control Statements
 
-#+begin_src python :session
+#+begin_src jupyter-python
 x = 10
 
 if (x > 5):
@@ -350,7 +350,7 @@ Lists can hold multiple values, but they cannot be treated as vectors.
 
 For example:
 
-#+begin_src python :session
+#+begin_src jupyter-python
 a = [1, 2, 3]
 b = [4, 5, 6]
 
@@ -361,7 +361,7 @@ With numpy, you can use lists as vectors in a mathematical sense.
 
 For example:
 
-#+begin_src python :session :results output
+#+begin_src jupyter-python
 import numpy as np
 
 a = np.array([1, 2, 3])
@@ -378,7 +378,7 @@ return c
 
 *** A handy use of lists
 
-#+begin_src python :session
+#+begin_src jupyter-python
 x = []
 for i in range(10):
     x.append(i*2)
@@ -429,7 +429,7 @@ The following functions convert an object of one type to another.
 
 Floating-point numbers are sometimes given in scientific notations. For example,
 
-#+begin_src python :session
+#+begin_src jupyter-python
 1.23e4
 #+end_src
 
@@ -469,7 +469,7 @@ symbols() can be used to define multiple variables at once, in a string separate
 
 Like python variables, symbols may have names longer than one character.
 
-#+begin_src python :session :results output
+#+begin_src jupyter-python
 # Define a single symbol
 x = symbols('x')
 
@@ -484,7 +484,7 @@ tau = symbols('tau')
 
 As an example, running the following code without defining x results in an error. Defining x as a symbol results in the expression x + 1.
 
-#+begin_src python :session :results output verbatim
+#+begin_src jupyter-python
 x = symbols('x')
 
 print(x + 1)
