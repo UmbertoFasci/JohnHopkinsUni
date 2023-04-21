@@ -597,6 +597,11 @@ expression.subs(x, 5)
 $\displaystyle 9$
 #+end_latex
 
+#+begin_center
+$9$
+#+end_center
+
+
 ** Rational Numbers
 
 Continuing Apr 21, 2023
