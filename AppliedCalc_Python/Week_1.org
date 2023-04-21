@@ -54,8 +54,6 @@ x = 10
 y = 12 # this part is ignored
 #+end_src
 
-#+RESULTS:
-
 Python executes lines from top to bottom.
 
 Python does not care about spaces...
@@ -66,8 +64,6 @@ x = 10
 x=10
 #+end_src
 
-#+RESULTS:
-
 However, Python does care about capitalization. ~X~ is not the same as ~x~.
 
 ** Variables
@@ -75,8 +71,6 @@ However, Python does care about capitalization. ~X~ is not the same as ~x~.
 #+begin_src jupyter-python
 x = 3.9
 #+end_src
-
-#+RESULTS:
 
 A *variable* stores a value in the computer's memory for use later in the program.
 The left side of the ~=~ is the name we want to give to the variable - so we can retrieve it later.
@@ -88,8 +82,6 @@ In programming ~=~ doesn't mean =equals=. It means =assign=.
 x = 3.9 * x * (1 - x)
 #+end_src
 
-#+RESULTS:
-
 The right hand side of the ~=~ could also be a complicated math expression.
 
 However, it could also be a string:
@@ -98,24 +90,11 @@ However, it could also be a string:
 x = "SOME VALUE"
 #+end_src
 
-#+RESULTS:
-
 Variables can be overwritten and updated.
 
 #+begin_src jupyter-python
 x = x + 1
 #+end_src
-
-#+RESULTS:
-:RESULTS:
-# [goto error]
-: [0;31m---------------------------------------------------------------------------[0m
-: [0;31mTypeError[0m                                 Traceback (most recent call last)
-: Cell [0;32mIn [6], line 1[0m
-: [0;32m----> 1[0m x [38;5;241m=[39m [43mx[49m[43m [49m[38;5;241;43m+[39;49m[43m [49m[38;5;241;43m1[39;49m
-:
-: [0;31mTypeError[0m: can only concatenate str (not "int") to str
-:END:
 
 ** The Magic of Python
 
@@ -126,8 +105,6 @@ x = "PYTHON IS FUN"
 y = 2
 z = 3.5
 #+end_src
-
-#+RESULTS:
 
 A really nice feature of Python is that we don't have to specify which type of data we are storing.
 
@@ -143,17 +120,17 @@ y = 3
 z = x + y # z has the value 5
 #+end_src
 
-#+RESULTS:
-
 OR
 
 #+begin_src jupyter-python
 x = "Hello"
 y = "World"
 z = x + y # z "Hello World"
+print(z)
 #+end_src
 
 #+RESULTS:
+: HelloWorld
 
 Problems arise when we try to combine variables of different types.
 
@@ -162,19 +139,6 @@ x = 2
 y = "Hello World"
 z = x + y # this will give an error
 #+end_src
-
-#+RESULTS:
-:RESULTS:
-# [goto error]
-: [0;31m---------------------------------------------------------------------------[0m
-: [0;31mTypeError[0m                                 Traceback (most recent call last)
-: Cell [0;32mIn [10], line 3[0m
-: [1;32m      1[0m x [38;5;241m=[39m [38;5;241m2[39m
-: [1;32m      2[0m y [38;5;241m=[39m [38;5;124m"[39m[38;5;124mHello World[39m[38;5;124m"[39m
-: [0;32m----> 3[0m z [38;5;241m=[39m [43mx[49m[43m [49m[38;5;241;43m+[39;49m[43m [49m[43my[49m
-:
-: [0;31mTypeError[0m: unsupported operand type(s) for +: 'int' and 'str'
-:END:
 
 There are built-in functions in Python to convert from one type to another.
 These will be discussed later.
@@ -190,8 +154,6 @@ def double(x):
     x = x*2
     return x
 #+end_src
-
-#+RESULTS:
 
 This function is going to double a number and return the results.
 
@@ -217,9 +179,12 @@ def double(x):
 a = double(2)
 b = double(3)
 c = double(4)
+
+print(a, b, c)
 #+end_src
 
 #+RESULTS:
+: 4 6 8
 
 With this (a, b, c) would equal (4, 6, 8) respectivly.
 
@@ -272,10 +237,6 @@ print(temp_conv(100))
 : 32.0
 : 212.0
 
-*Results:*
-
-32.0
-212.0
 
 
 ** Simultaneous Assignment
@@ -345,9 +306,17 @@ temps = [0, 100, 38]
 
 for temp in temps:
     F = 9/5 * (temp) + 32
+    return F
 #+end_src
 
 #+RESULTS:
+:RESULTS:
+# [goto error]
+: [0;36m  Cell [0;32mIn [55], line 5[0;36m[0m
+: [0;31m    return F[0m
+: [0m    ^[0m
+: [0;31mSyntaxError[0m[0;31m:[0m 'return' outside function
+:END:
 
 ** Range Function
 
@@ -358,17 +327,6 @@ The range function also allows us to specify a step size.
 #+begin_src jupyter-python
 range(start, stop, step)
 #+end_src
-
-#+RESULTS:
-:RESULTS:
-# [goto error]
-: [0;31m---------------------------------------------------------------------------[0m
-: [0;31mNameError[0m                                 Traceback (most recent call last)
-: Cell [0;32mIn [22], line 1[0m
-: [0;32m----> 1[0m [38;5;28mrange[39m([43mstart[49m, stop, step)
-:
-: [0;31mNameError[0m: name 'start' is not defined
-:END:
 
 *** Exercise
 
