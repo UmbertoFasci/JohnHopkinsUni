@@ -593,9 +593,9 @@ expression.subs(x, 5)
 #+end_src
 
 #+RESULTS:
-#+begin_export latex
+#+begin_src latex
 $\displaystyle 9$
-#+end_export
+#+end_src
 
 ** Rational Numbers
 
