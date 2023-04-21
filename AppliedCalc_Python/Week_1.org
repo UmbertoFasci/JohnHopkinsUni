@@ -24,6 +24,7 @@
 - [[#operators-and-expressions-in-python][Operators and Expressions in Python]]
 - [[#sympy-basics][SymPy Basics]]
   - [[#symbols][Symbols]]
+  - [[#rational-numbers][Rational Numbers]]
 
 * Learning Objectives
 
@@ -200,9 +201,12 @@ def addition(x,y,z):
     # Returns the sum of x, y, and z.
     sum = x + y + z
     return sum
+
+addition(2, 4, 6)
 #+end_src
 
   #+RESULTS:
+  : 12
 
 *** Exercise 2
 
@@ -219,9 +223,12 @@ def temp_conv(C):
     # Convert Celsius to Fahrenheit.
     F = 9/5 * (C) + 32
     return F
+
+temp_conv(37.77)
 #+end_src
 
   #+RESULTS:
+  : 99.986
 
 **** Test Exercise Code
 
@@ -250,8 +257,6 @@ then I can assign multiple variable values at once.
 x, y = 10, 15
 #+end_src
 
-#+RESULTS:
-
 
 ** Lists
 
@@ -261,15 +266,11 @@ A variable can only hold one value.
 x = 10
 #+end_src
 
-#+RESULTS:
-
 A list is a special variable that can hold multiple values.
 
 #+begin_src jupyter-python
 x = [54, 76, 100]
 #+end_src
-
-#+RESULTS:
 
 
 ** Definite Loops
@@ -288,10 +289,13 @@ For example:
 values = [54, 76, 100]
 
 for value in values:
-    value = value*2
+    print(value*2)
 #+end_src
 
 #+RESULTS:
+: 108
+: 152
+: 200
 
 *** Exercise
 
@@ -305,18 +309,13 @@ Use a for loop to convert a list of temps.
 temps = [0, 100, 38]
 
 for temp in temps:
-    F = 9/5 * (temp) + 32
-    return F
+    print(9/5 * (temp) + 32)
 #+end_src
 
 #+RESULTS:
-:RESULTS:
-# [goto error]
-: [0;36m  Cell [0;32mIn [55], line 5[0;36m[0m
-: [0;31m    return F[0m
-: [0m    ^[0m
-: [0;31mSyntaxError[0m[0;31m:[0m 'return' outside function
-:END:
+: 32.0
+: 212.0
+: 100.4
 
 ** Range Function
 
@@ -336,10 +335,32 @@ Try modifying the program so that it converts all the temperatures from 0 to 100
 
 #+begin_src jupyter-python
 for temp in range(0, 100, 5):
-    F = 9/5 * (temp) + 32
+    print(9/5 * (temp) + 32)
 #+end_src
 
 #+RESULTS:
+#+begin_example
+32.0
+41.0
+50.0
+59.0
+68.0
+77.0
+86.0
+95.0
+104.0
+113.0
+122.0
+131.0
+140.0
+149.0
+158.0
+167.0
+176.0
+185.0
+194.0
+203.0
+#+end_example
 
 ** Indefinite Loops
 
@@ -394,19 +415,6 @@ b = [4, 5, 6]
 c = a * b # this will generate an error.
 #+end_src
 
-#+RESULTS:
-:RESULTS:
-# [goto error]
-: [0;31m---------------------------------------------------------------------------[0m
-: [0;31mTypeError[0m                                 Traceback (most recent call last)
-: Cell [0;32mIn [26], line 4[0m
-: [1;32m      1[0m a [38;5;241m=[39m [[38;5;241m1[39m, [38;5;241m2[39m, [38;5;241m3[39m]
-: [1;32m      2[0m b [38;5;241m=[39m [[38;5;241m4[39m, [38;5;241m5[39m, [38;5;241m6[39m]
-: [0;32m----> 4[0m c [38;5;241m=[39m [43ma[49m[43m [49m[38;5;241;43m*[39;49m[43m [49m[43mb[49m
-:
-: [0;31mTypeError[0m: can't multiply sequence by non-int of type 'list'
-:END:
-
 With numpy, you can use lists as vectors in a mathematical sense.
 
 For example:
@@ -419,21 +427,11 @@ b = np.array([4, 5, 6])
 
 c = a * b
 
-return c
+print(c)
 #+end_src
 
 #+RESULTS:
-:RESULTS:
-# [goto error]
-: [0;31m---------------------------------------------------------------------------[0m
-: [0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-: Cell [0;32mIn [27], line 1[0m
-: [0;32m----> 1[0m [38;5;28;01mimport[39;00m [38;5;21;01mnumpy[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnp[39;00m
-: [1;32m      3[0m a [38;5;241m=[39m np[38;5;241m.[39marray([[38;5;241m1[39m, [38;5;241m2[39m, [38;5;241m3[39m])
-: [1;32m      4[0m b [38;5;241m=[39m np[38;5;241m.[39marray([[38;5;241m4[39m, [38;5;241m5[39m, [38;5;241m6[39m])
-:
-: [0;31mModuleNotFoundError[0m: No module named 'numpy'
-:END:
+: [ 4 10 18]
 
 *Results:*
 
@@ -445,9 +443,12 @@ return c
 x = []
 for i in range(10):
     x.append(i*2)
+
+x
 #+end_src
 
 #+RESULTS:
+| 0 | 2 | 4 | 6 | 8 | 10 | 12 | 14 | 16 | 18 |
 
 With empty lists you can, in practice, store results. In this case the result from this code would return a list:
 
@@ -529,6 +530,14 @@ Symbolic computation also retains the exact value of expressions, rather than ro
 
 The alternative to symbolic computation is numerical computation. In *numerical computation*, all values are represented as either integers or floating-point numbers.
 
+Importing SymPy:
+
+#+begin_src jupyter-python
+from sympy import *
+#+end_src
+
+#+RESULTS:
+
 ** Symbols
 
 To use variables as unknowns, we define them with *symbols()*.
@@ -549,35 +558,45 @@ tau = symbols('tau')
 #+end_src
 
 #+RESULTS:
-:RESULTS:
-# [goto error]
-: [0;31m---------------------------------------------------------------------------[0m
-: [0;31mNameError[0m                                 Traceback (most recent call last)
-: Cell [0;32mIn [30], line 2[0m
-: [1;32m      1[0m [38;5;66;03m# Define a single symbol[39;00m
-: [0;32m----> 2[0m x [38;5;241m=[39m [43msymbols[49m([38;5;124m'[39m[38;5;124mx[39m[38;5;124m'[39m)
-: [1;32m      4[0m [38;5;66;03m# Define three symbols at once[39;00m
-: [1;32m      5[0m a, b, c [38;5;241m=[39m symbols([38;5;124m'[39m[38;5;124ma, b, c[39m[38;5;124m'[39m)
-:
-: [0;31mNameError[0m: name 'symbols' is not defined
-:END:
 
 As an example, running the following code without defining x results in an error. Defining x as a symbol results in the expression x + 1.
 
 #+begin_src jupyter-python
 x = symbols('x')
 
-print(x + 1)
+x + 1
 #+end_src
 
 #+RESULTS:
-:RESULTS:
-# [goto error]
-: [0;31m---------------------------------------------------------------------------[0m
-: [0;31mNameError[0m                                 Traceback (most recent call last)
-: Cell [0;32mIn [31], line 1[0m
-: [0;32m----> 1[0m x [38;5;241m=[39m [43msymbols[49m([38;5;124m'[39m[38;5;124mx[39m[38;5;124m'[39m)
-: [1;32m      3[0m [38;5;28mprint[39m(x [38;5;241m+[39m [38;5;241m1[39m)
-:
-: [0;31mNameError[0m: name 'symbols' is not defined
-:END:
+#+begin_export latex
+$\displaystyle x + 1$
+#+end_export
+
+~This exports automatically as LaTex, I will review how this renders in the git view.~
+
+*** Substitution
+
+Suppose we want to substitute a value for the variable x in an expression, say x = 5.
+Typing ~x = 5~ will just redefine the Python variable, rather than changing the expression.
+
+Instead, we must use ~subs(x,5)~
+
+#+begin_src jupyter-python
+# Define the symbol
+x = symbols('x')
+
+# Define an expression
+expression = 2*x - 1
+
+# Substitute 5 for x
+expression.subs(x, 5)
+#+end_src
+
+#+RESULTS:
+#+begin_export latex
+$\displaystyle 9$
+#+end_export
+
+** Rational Numbers
+
+Continuing Apr 21, 2023
