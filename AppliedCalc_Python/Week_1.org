@@ -574,6 +574,9 @@ $\displaystyle x + 1$
 
 ~This exports automatically as LaTex, I will review how this renders in the git view.~
 
+Post transformation of symbolic results was necessary in order to render expression produced by the SymPy package.
+
+
 *** Substitution
 
 Suppose we want to substitute a value for the variable x in an expression, say x = 5.
