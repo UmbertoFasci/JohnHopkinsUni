@@ -568,9 +568,9 @@ x + 1
 #+end_src
 
 #+RESULTS:
-#+begin_center
+#+begin_export latex
 $\displaystyle x + 1$
-#+end_center
+#+end_export
 
 ~This exports automatically as LaTex, I will review how this renders in the git view.~
 
@@ -596,11 +596,38 @@ expression.subs(x, 5)
 #+end_src
 
 #+RESULTS:
-#+begin_center
+#+begin_export latex
 $\displaystyle 9$
-#+end_center
+#+end_export
+
 
 
 ** Rational Numbers
 
-Continuing Apr 21, 2023
+The other feature of symbolic computation is training exact values.
+
+In Python, division with / results in either an integer or a floating-point number. If the quotient happens to be a non-terminating decimal, it is truncated.
+
+For example, $\frac{1}{3} = 0.\bar{3}$ is cut to $0.333333333333$ in Python.
+
+#+begin_src jupyter-python
+# The quotient 1/3 is truncated
+1/3
+#+end_src
+
+#+RESULTS:
+: 0.3333333333333333
+
+SymPy keeps the same meaning for all arithmetic operators from Python. This includes division (/) and floor division (//).
+
+To keep a rational number $\frac{a}{b}$ represented as its exact value (equivalent to writing it as a fraction), use ~Rational(a,b)~ from SymPy.
+
+#+begin_src jupyter-python
+# 1/3 is kept as a rational number
+Rational(1, 3)
+#+end_src
+
+#+RESULTS:
+#+begin_export latex
+$\displaystyle \frac{1}{3}$
+#+end_export
