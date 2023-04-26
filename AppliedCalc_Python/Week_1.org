@@ -26,6 +26,7 @@
   - [[#symbols][Symbols]]
   - [[#rational-numbers][Rational Numbers]]
   - [[#evaluating][Evaluating]]
+- [[#working-with-sympy][Working with SymPy]]
 
 * Learning Objectives
 
@@ -649,4 +650,84 @@ expr.evalf()
 #+RESULTS:
 #+begin_export latex
 $\displaystyle 1.4142135623731$
+#+end_export
+
+
+* Working with SymPy :VIDEO:
+
+The video goes over Python's vanilla functions as a calculator and variable assignment.
+
+#+begin_src jupyter-python
+x = Symbol("x")
+#+end_src
+
+#+RESULTS:
+
+#+begin_src jupyter-python
+x * x
+#+end_src
+
+#+RESULTS:
+#+begin_export latex
+$\displaystyle x^{2}$
+#+end_export
+
+#+begin_src jupyter-python
+tau = Symbol("tau")
+#+end_src
+
+#+RESULTS:
+
+#+begin_src jupyter-python
+tau + tau
+#+end_src
+
+#+RESULTS:
+#+begin_export latex
+$\displaystyle 2 \tau$
+#+end_export
+
+This covers simple algebra.
+
+#+begin_src jupyter-python
+x, y, z = symbols("x, y, z")
+#+end_src
+
+#+RESULTS:
+
+#+begin_src jupyter-python
+x*y + y*x
+#+end_src
+
+#+RESULTS:
+#+begin_export latex
+$\displaystyle 2 x y$
+#+end_export
+
+#+begin_src jupyter-python
+g = (x+y)**2
+g.expand()
+#+end_src
+
+#+RESULTS:
+#+begin_export latex
+$\displaystyle x^{2} + 2 x y + y^{2}$
+#+end_export
+
+#+begin_src jupyter-python
+(x**2 - y**2)
+#+end_src
+
+#+RESULTS:
+#+begin_export latex
+$\displaystyle x^{2} - y^{2}$
+#+end_export
+
+#+begin_src jupyter-python
+(x**2 - y**2).factor()
+#+end_src
+
+#+RESULTS:
+#+begin_export latex
+$\displaystyle \left(x - y\right) \left(x + y\right)$
 #+end_export
