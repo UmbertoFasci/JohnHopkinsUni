@@ -25,6 +25,7 @@
 - [[#sympy-basics][SymPy Basics]]
   - [[#symbols][Symbols]]
   - [[#rational-numbers][Rational Numbers]]
+  - [[#evaluating][Evaluating]]
 
 * Learning Objectives
 
@@ -630,4 +631,22 @@ Rational(1, 3)
 #+RESULTS:
 #+begin_export latex
 $\displaystyle \frac{1}{3}$
+#+end_export
+
+** Evaluating
+
+When solving problems, we often want a decimal approximation of the answer. To convert an expression to a floating point number with SymPy, use ~evalf()~
+
+For example, since $\sqrt{2}$ is an irrational number, it will always be expressed as sqrt(2) in SymPy.
+
+To find a decimal approximation for $\sqrt{2}$, we sould use the following code.
+
+#+begin_src jupyter-python
+expr = sqrt(2)
+expr.evalf()
+#+end_src
+
+#+RESULTS:
+#+begin_export latex
+$\displaystyle 1.4142135623731$
 #+end_export
